@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+
+   <groupId>com.horstmann.corejava</groupId>
+   <artifactId>corejava-modulechapter</artifactId>
+   <version>1.0-SNAPSHOT</version>
+
+   <packaging>pom</packaging>
+
+   <properties>
+      <maven.compiler.source>25</maven.compiler.source>
+      <maven.compiler.target>25</maven.compiler.target>
+   </properties>
+
+   <modules>
+      <module>com.horstmann.greet</module>
+      <module>com.horstmann.greetsvc</module>
+      <module>com.horstmann.util</module>
+      <module>v1ch12.automod</module>
+      <module>v1ch12.exportedpkg</module>
+      <module>v1ch12.hellomod</module>
+      <module>v1ch12.openpkg</module>
+      <module>v1ch12.openpkg2</module>
+      <module>v1ch12.requiremod</module>
+      <module>v1ch12.useservice</module>
+   </modules>
+
+   <build>
+      <sourceDirectory>.</sourceDirectory>
+      <plugins>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.11.0</version>
+            <configuration>
+               <release>${maven.compiler.source}</release>
+               <fork>true</fork>
+               <compilerArgs>
+                  <arg>--enable-preview</arg>
+               </compilerArgs>
+            </configuration>
+         </plugin>
+      </plugins>
+   </build>
+
+</project>

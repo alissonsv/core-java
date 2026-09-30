@@ -1,0 +1,6 @@
+// For uploading to the CodeCheck service in v2ch04.httpClient.HttpClientDemo
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
